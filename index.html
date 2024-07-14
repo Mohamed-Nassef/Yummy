@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="icon" href="./images/logo.png" />
+    <!-- Fonts Links (Montserrat,Poppins)-->
+
+    <!-- CSS Links  (bootstrap,fontawsome 6)-->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- fontawsome 4 for old icons-->
+    <link rel="stylesheet" href="./CSS/font-awesome.min.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div
+      class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center"
+      style="display: none"
+    >
+      <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <!-- Side Navigation -->
+    <div
+      class="s-nav min-vh-100 position-fixed d-flex top-0 z-3"
+      style="left: 0px"
+    >
+      <div
+        class="nav-tab d-flex flex-column justify-content-between min-vh-100 p-4 bg-black"
+      >
+        <div class="links text-white">
+          <div class="overflow-hidden d-flex flex-column">
+            <a
+              onclick="showSearchInputs(); closeSideNav()"
+              class="py-2 position-relative"
+              style="top: 0px"
+            >
+              Search
+            </a>
+            <a
+              onclick="getCategories(); closeSideNav()"
+              class="py-2 position-relative"
+              style="top: 0px"
+            >
+              Categories
+            </a>
+            <a
+              onclick="getArea(); closeSideNav()"
+              class="py-2 position-relative"
+              style="top: 0px"
+            >
+              Area
+            </a>
+            <a
+              onclick="getIngredients(); closeSideNav()"
+              class="py-2 position-relative"
+              style="top: 0px"
+            >
+              Ingredients
+            </a>
+            <a
+              onclick="showContacts(); closeSideNav()"
+              class="py-2 position-relative"
+              style="top: 0px"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <div class="nav-footer text-white">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <p class="text-white">Copyright Â© 2019 All Rights <br />Reserved.</p>
+        </div>
+      </div>
+      <div
+        class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black"
+      >
+        <img class="logo" src="./images/logo.png" style="width: 50px" />
+        <i class="fa-solid open-close-icon fa-2x fa-x"></i>
+        <div>
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content -->
+
+    <div id="main" class="main">
+      <div class="container w-75" id="searchContainer"></div>
+
+      <div class="min-vh-100 position-relative">
+        <div
+          class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+        >
+          <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+
+        <div class="container">
+          <div class="row py-5 g-4" id="rowData"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Js file (jquery)-->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <!-- Js file (bootstrap)-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- my js -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
